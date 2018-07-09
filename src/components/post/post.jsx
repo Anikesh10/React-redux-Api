@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/postActions';
-import Loader from './Loader';
-// import { Link, Route } from 'react-router-dom';
+import { fetchPosts } from '../../actions/postActions';
+import Loader from '../loader/Loader';
+
+import './post.css';
 
 class Post extends Component {
 	componentWillMount () {
