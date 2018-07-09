@@ -12,13 +12,14 @@ export const fetchPosts = () => dispatch => {
 	);
 };
 
-export const fetchPhotos = (post) => dispatch => {
-	axios('https://jsonplaceholder.typicode.com/photos')
+export const fetchPhotos = (page=1) => dispatch => {
+	axios(`https://jsonplaceholder.typicode.com/photos?albumId=${page}`)
 	.then( res => (res.data))
 	.then ( album => 
 		dispatch({
 			type: FETCH_PHOTOS,
-			payload: album
+			payload: album,
+			pageNo: page 
 		})
 	);
 };		

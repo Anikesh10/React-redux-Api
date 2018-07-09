@@ -2,7 +2,8 @@ import { FETCH_POSTS, FETCH_PHOTOS } from '../actions/types';
  	 
 const initialState = {
 	items: [],
-	photos: []
+	photos: [],
+	page: 1
 } 	 
 
 export default function(state = initialState,action) {
@@ -15,7 +16,8 @@ export default function(state = initialState,action) {
 		case FETCH_PHOTOS: 
 			return {
 				...state,
-				photos : action.payload 				
+				photos : action.payload, 
+				page : action.pageNo			
 			}	
 		default :
 			return state;

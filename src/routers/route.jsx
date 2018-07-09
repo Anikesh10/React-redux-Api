@@ -8,17 +8,14 @@ import Header from '../components/common/header';
 const routeConfig = [
 				{
 					path:"/",
-					component: Header,
-					isExact: true
+					component: Header
 				},
 				{
 					path:"/Albums",
-					isExact: true,
 					component: Albums
 				},
 				{
 					path:"/Post",
-					isExact: true,
 					component: Post
 				}
 			];

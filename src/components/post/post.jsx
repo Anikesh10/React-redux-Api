@@ -8,12 +8,10 @@ import './post.css';
 class Post extends Component {
 	componentWillMount () {
 		this.props.fetchPosts();
-		console.log(this);
 	}
 
 	render() {
 		let eachPost;
-		console.log(this);
 		if(this.props.posts && this.props.posts.length) {
 			eachPost = this.props.posts.map( postItem => (
 				<li key={postItem.id}>	

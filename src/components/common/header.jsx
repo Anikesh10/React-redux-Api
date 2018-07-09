@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Navbar, NavbarBrand ,NavItem } from 'reactstrap';
+import { Navbar } from 'reactstrap';
 
 export default class Header extends React.Component {
 
